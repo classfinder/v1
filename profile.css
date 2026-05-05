@@ -1,0 +1,380 @@
+/* ========================================
+   PROFILE PAGE - Like V1 Design
+   Background: #112a4e
+   ======================================== */
+
+#profile-page { 
+    background: var(--primary-dark) !important;
+    min-height: 100%;
+    display: block !important;
+}
+
+/* صورة الهيدر */
+.profile-header-container {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-header-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.login-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, var(--primary-orange));
+    -webkit-text-fill-color: transparent;
+}
+
+.login-overlay-content { 
+    flex: 1; 
+    padding: 20px 25px 30px 25px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px; 
+}
+
+/* الحقول المتداخلة */
+.pmu-outlined-field { 
+    position: relative; 
+    width: 280px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.pmu-outlined-field .input-box { 
+    border: 1.2px solid white; 
+    border-radius: 50px; 
+    height: 45px; 
+    padding: 0 20px; 
+    position: relative; 
+}
+
+.pmu-outlined-field .input-box:focus-within {
+    border-color: var(--primary-orange);
+}
+
+.pmu-outlined-field label { 
+    position: absolute; 
+    top: -12px;
+    left: 18px; 
+    background: var(--primary-dark);
+    padding: 0 8px; 
+    font-size: 11px; 
+    font-weight: 500;
+    border-radius: 20px;
+    z-index: 5; 
+}
+
+.pmu-outlined-field input { 
+    background: transparent; 
+    border: none; 
+    width: 100%; 
+    height: 100%; 
+    color: white; 
+    outline: none; 
+    font-size: 14px; 
+}
+
+.pmu-outlined-field input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 13px;
+}
+
+.login-with-text { 
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.6); 
+    font-size: 12px; 
+    margin: 20px 0 18px; 
+    width: 280px;
+    max-width: 100%;
+}
+
+.social-login-icons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+.social-login-icons a { 
+    color: white; 
+    font-size: 22px; 
+    transition: 0.3s; 
+    opacity: 0.7;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-login-icons a:active {
+    transform: scale(0.94);
+}
+
+.pmu-btn-signin { 
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
+    color: white; 
+    border: none; 
+    padding: 12px 16px; 
+    border-radius: 50px; 
+    font-weight: 700; 
+    font-size: 15px; 
+    margin-top: 10px;
+    margin-bottom: 12px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+    width: 280px;
+    max-width: 100%;
+    transition: all 0.2s ease;
+}
+
+.pmu-btn-signin:active {
+    transform: scale(0.97);
+}
+
+.pmu-signup-link { 
+    text-align: center; 
+    width: 100%;
+}
+
+.pmu-signup-link a { 
+    color: rgba(255, 255, 255, 0.6); 
+    font-size: 13px; 
+    text-decoration: none; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 3px;
+    transition: all 0.2s ease;
+}
+
+.pmu-signup-link a:hover {
+    color: var(--primary-orange);
+}
+
+
+
+/* ========== STUDENT DASHBOARD STYLES ========== */
+
+#student-dashboard {
+    background: var(--primary-dark);
+    padding-bottom: 20px;
+}
+
+/* Header with cover */
+.dashboard-header {
+    position: relative;
+}
+
+.dashboard-cover {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Profile info card (overlapping cover) */
+.profile-info-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    margin: -40px 20px 20px 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: -60px auto 15px auto;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--primary-orange);
+    object-fit: cover;
+    background: var(--primary-dark);
+}
+
+.edit-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-orange);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-avatar:active {
+    transform: scale(0.9);
+}
+
+.profile-info-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.profile-info-card p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 15px;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-stats .stat {
+    text-align: center;
+}
+
+.dashboard-stats .stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary-orange);
+}
+
+.dashboard-stats .stat-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dashboard Menu */
+.dashboard-menu {
+    margin: 20px;
+}
+
+.menu-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-section h3 {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.menu-item:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.menu-item i:first-child {
+    width: 28px;
+    font-size: 18px;
+    color: var(--primary-orange);
+    margin-right: 12px;
+}
+
+.menu-item span {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.menu-item i:last-child {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Logout button */
+.logout-btn-container {
+    margin-top: 20px;
+}
+
+.logout-dashboard-btn {
+    width: 100%;
+    background: rgba(255, 68, 68, 0.15);
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    color: #ff5555;
+    padding: 14px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-dashboard-btn:active {
+    transform: scale(0.97);
+    background: rgba(255, 68, 68, 0.25);
+}
+
+.app-version {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+}
+/* ========== FIX FOR DASHBOARD OVERLAY ========== */
+#student-dashboard {
+    position: relative;
+    z-index: 10;
+}
+
+#student-dashboard .cover-overlay {
+    display: none !important;
+}
+
+/* إزالة أي خلفية صفراء من Dashboard */
+#student-dashboard [style*="rgba(243,156,18,0.3)"],
+#student-dashboard [style*="#f39c12"] {
+    background: transparent !important;
+}
